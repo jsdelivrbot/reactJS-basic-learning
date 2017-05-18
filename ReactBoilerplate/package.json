@@ -1,17 +1,17 @@
 {
-  "name": "hello-react",
+  "name": "boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple react app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Andrew Mead",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.15.2",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "express": "^4.13.4",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",
