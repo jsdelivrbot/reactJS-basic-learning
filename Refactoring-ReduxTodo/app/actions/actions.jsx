@@ -1,6 +1,6 @@
 export var setSearchText = (searchText) => {
     return {
-        type: 'SET_SERACH_TEXT',
+        type: 'SET_SEARCH_TEXT',
         searchText: searchText
     }
 };
@@ -15,6 +15,13 @@ export var addTodo = (text) => {
     return {
         type: 'ADD_TODO',
         text: text
+    }
+}
+
+export var addTodos = (todos) => {
+    return {
+        type: 'ADD_TODOS',
+        todos: todos
     }
 }
 
