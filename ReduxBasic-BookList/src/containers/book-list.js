@@ -8,11 +8,12 @@ class BookList extends Component {
 
     //book is the just the static property of the component, when fetching new data, the component will rerender
     renderList() {
-        return this.props.books.map((book) => {
+        console.log(this.props);
+        return this.props.booksRev.map((book) => {
             return (
                 <li
                     key={book.title}
-                    onClick={() => this.props.selectBook(book)}
+                    onClick={() => this.props.selectOneBook(book)}
                     className="list-group-item"
                     {...this.props}>
                     {book.title}
@@ -30,20 +31,23 @@ class BookList extends Component {
     }
 }
 
+//set value / property for the list
 function mapStateToProps(state) {
     //whatever is returned will show up as prop
     //inside of BookList
     return {
-        books: state.books
+        booksRev: state.books
     };
 }
 
 // Anything returned from this function will end up as props
 // on the BookList container
+//set methods
 function mapDispatchToProps(dispatch) {
     // Whenever selectBook is called, the result shoudl be passed
     // to all of our reducers
-    return bindActionCreators({ selectBook: selectBook }, dispatch);
+    
+    return bindActionCreators({ selectOneBook: selectBook }, dispatch);
 }
 
 
